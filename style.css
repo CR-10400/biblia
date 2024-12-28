@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.testament-section {
+    margin-bottom: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.book-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #45a049;
+}
+
+.chapters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+}
+
+.chapter-btn {
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chapter-btn:hover {
+    background-color: #007399;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #333;
+}
+
+.back-btn {
+    margin-bottom: 20px;
+}
+
+#verse-content {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.screen {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.version-selector {
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.verse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.verse-header h2 {
+    margin: 0;
+}
+
+.verse-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

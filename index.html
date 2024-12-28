@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bíblia Offline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Tela inicial com os livros -->
+        <div id="books-screen" class="screen active">
+            <h1>Bíblia</h1>
+
+            <div class="testament-section">
+                <h2>Antigo Testamento</h2>
+                <div id="old-testament" class="books-grid"></div>
+            </div>
+
+            <div class="testament-section">
+                <h2>Novo Testamento</h2>
+                <div id="new-testament" class="books-grid"></div>
+            </div>
+        </div>
+
+        <!-- Tela de capítulos -->
+        <div id="chapters-screen" class="screen">
+            <button class="nav-btn back-btn" onclick="showScreen('books-screen')">Voltar</button>
+            <h2 id="book-title"></h2>
+            <div id="chapters-grid" class="chapters-grid"></div>
+        </div>
+
+        <!-- Tela de versículos -->
+        <div id="verses-screen" class="screen">
+            <button class="nav-btn back-btn" onclick="showScreen('chapters-screen')">Voltar</button>
+
+            <div class="verse-header">
+                <h2 id="chapter-title"></h2>
+                <div class="verse-controls">
+                    <select id="version-selector" class="version-selector" onchange="changeVersion()">
+                        <option value="nvi">Nova Versão Internacional</option>
+                        <option value="ara">Almeida Revista e Atualizada</option>
+                        <option value="acf">Almeida Corrigida Fiel</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="verse-content"></div>
+            <div class="navigation">
+                <button class="nav-btn" onclick="navigateChapter(-1)">Capítulo Anterior</button>
+                <button class="nav-btn" onclick="navigateChapter(1)">Próximo Capítulo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de anotações permanece o mesmo -->
+    <div id="note-modal" class="note-modal">
+        <!-- ... conteúdo do modal ... -->
+    </div>
+
+    <script src="biblia.js"></script>
+    <script src="./versoes/nvi.js"></script>
+</body>
+
+</html>
